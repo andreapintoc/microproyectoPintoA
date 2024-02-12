@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="main-menu">
+    <h1>BINGO</h1>
+    <label for="player-names">ESCRIBA LOS NOMBRES DE LOS JUGADORES (separados por comas (,)):</label>
+    <input type="text" id="player-names">
+    <label for="card-size">Seleccione el tamaño del cartón:</label>
+    <select id="card-size">
+    <option value="3">3x3</option>
+    <option value="4">4x4</option>
+    <option value="5">5x5</option>
+</select>
+    <button onclick="startGame()">EMPEZAR</button>
+  </div>
+
+  <div id="game-board" style="display: none;">
+    <h2>Jugador: <span id="current-player"></span></h2>
+    <div id="card-container"></div>
+    <div id="player-list"></div>
+    <button onclick="drawNumber()">SORTEAR NUMERO</button>
+    <p id="number-display"></p>
+    <p id="result-display"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
